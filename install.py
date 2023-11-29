@@ -22,11 +22,11 @@ print("""
       ██╔══██╗██║░░██║░░░██║░░░
       ██████╦╝╚█████╔╝░░░██║░░░
       ╚═════╝░░╚════╝░░░░╚═╝░░░
-      ░ ░\x1b[00m\033[041m TERMUX TELEGRAM BOT MrDevils  \033[00m\x1b[1;00m░░
+      ░ ░\x1b[00m\033[041m TERMUX TELEGRAM BOT MEYİT \033[00m\x1b[1;00m░░
         ░ ░   ░   ░    ░ ░   ░    ░   ░   ░\x1b[00m
 """)
-m('\x1b[00m\033[041m Install bahan automatis  \033[00m')
-m('\x1b[00m\033[041m Jangan Keluar Dari Termux Sebelum Selesai Menginstall!!  \033[00m')
+m('\x1b[00m\033[041m Malzemeleri otomatik olarak yükleyin  \033[00m')
+m('\x1b[00m\033[041m Kurulumu tamamlamadan Termux'tan çıkmayın!!  \033[00m')
 os.system("pkg update -y")
 os.system("pkg upgrade -y")
 os.system("pkg install nano")
@@ -38,8 +38,8 @@ os.system("pkg install ffmpeg -y")
 os.system("npm install")
 os.system("npm audit fix")
 os.system("npm install axios")
-os.system("npm install telegraf@3.32")
-m('\x1b[00m\033[041m Memulai Telegram Bot...  \033[00m')
+os.system("npm install telegram@3.32")
+m('\x1b[00m\033[041m Telegram Botunu Başlatmak...  \033[00m')
 os.system("clear")
 os.system("python start.py")
 m("DONE")
