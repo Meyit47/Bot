@@ -21,27 +21,27 @@ instagram : adimas_shadoet
 */
 const Telegraf = require('telegraf')
 
-const bot = new Telegraf('1675749539:AAH46KNMRschhJDMuI5dclpp9FnB0znEaK4')
+const bot = new Telegraf('6341629009:AAHE0shdOEKZNQ_iWpfLH9pai-KG8moj6TA')
 const axios = require('axios')
 
 /*********[ Apikey ]*********/
-let lolhuman = '99ecdb09b1053d90fbc15d56'
-let iteach = 'Ganti pakai apikey kalian' //silahkan login/register di https://api.i-tech.id untuk mendapatkan apikey
+let lolhuman = '258e1a4c3dc48e0c46ee7c8c927ac4a3'
+let iteach = 'Apikeyinizi değiştirin' //silahkan login/register di https://api.i-tech.id untuk mendapatkan apikey
 /***************************/
 
-const helpMessage = `Katakan sesuatu kepada saya\n/start - untuk memulai bot\n/menu - untuk menampilkan list menu`;
+const helpMessage = `Bana bir şey söyle\n/start - botu başlatmak için\n/menü - menü listesini görüntülemek için`;
 bot.use((ctx, next) => {
   if(ctx.updateSubTypes[0] == "text"){
-    console.log("[ @"+ctx.from.username+" ]  Mengeksekusi : "+ctx.message.text);
+    console.log("[ @"+ctx.from.username+" ]  Uygulama : "+ctx.message.text);
   }else{
-    console.log("[ @"+ctx.from.username+" ]  Mengirim : "+ctx.updateSubTypes[0]);
+    console.log("[ @"+ctx.from.username+" ]  Gönderme : "+ctx.updateSubTypes[0]);
   }
   next();
 })
 
 bot.command("start", ctx => {
-    ctx.reply("Halo "+ctx.from.first_name);
-    ctx.reply("Silahkan pilih menu dibawah ini...",
+    ctx.reply("Merhaba "+ctx.from.first_name);
+    ctx.reply("Lütfen aşağıdaki menüyü seçin...",
     {
         reply_markup: {
             inline_keyboard: [
@@ -58,29 +58,29 @@ bot.hears('/', (ctx) => {
 })
 
 bot.hears('Kembali Ke Menu Utama', (ctx) => {
-    let priceMessage = '┏━━❉ DARK BOT ❉━━━┓\n┣⊱ Creator : MrDevils\n┣⊱ Whatsapp : 85939888897\n┣⊱ Github : github.com/adimas999\n┣⊱ IG : adimas_sahadoet\n┣⊱ Owner : MrDevils\n┗━━━━━━━━━━━━━━━━\n┏━━❉ *INFO* ❉━━━┓\n┣⊱ *Dilarang spam bot*\n┗━━━━━━━━━━━━━━━━\n┏━━⊱ *BOT MENU* ⊰━━┓\n┣⊱ /othermenu\n┣⊱ /makermenu\n┣⊱ /praymenu\n┣⊱ /funmenu\n┣⊱ /kerangmenu\n┣⊱ /mediamenu\n┣⊱ /animemenu\n┣⊱ /nsfwmenu\n┣⊱ /downloadmenu(error)\n┗━━━━━━━━━━━━━━━━';
+    let priceMessage = '┏━━❉ DARK BOT ❉━━━┓\n┣⊱ Yaratıcı : Meyit47\n┣⊱ Tgram : @Meyit47\n┣⊱ chat : t.me/S1F1RB1RCHAT\n┣⊱ IG : adimas_sahadoet\n┣⊱ Owner : MEYİTZADE\n┗━━━━━━━━━━━━━━━━\n┏━━❉ *BİLGİ* ❉━━━┓\n┣⊱ *Spam botları*\n┗━━━━━━━━━━━━━━━━\n┏━━⊱ *BOT MENU* ⊰━━┓\n┣⊱ /othermenu\n┣⊱ /makermenu\n┣⊱ /praymenu\n┣⊱ /funmenu\n┣⊱ /kerangmenu\n┣⊱ /mediamenu\n┣⊱ /animemenu\n┣⊱ /nsfwmenu\n┣⊱ /downloadmenu(error)\n┗━━━━━━━━━━━━━━━━';
     ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id, priceMessage,
     {
         reply_markup: {
             keyboard: [
                 [
-                    {text: 'Other Menu'},
+                    {text: 'Diğer Menu'},
                     {text: "Maker Menu"},
-                    {text: "Pray Menu"}
+                    {text: "Dua Menu"}
                 ],
                 [
-                    {text: "Fun Menu"},
-                    {text: "Kerang Menu"},
+                    {text: "Eğlence Menu"},
+                    {text: "Kabuk Menu"},
                     {text: "Media Menu"}
                 ],
                 [
                     {text: "Anime Menu"},
                     {text: "Nsfw Menu"},
-                    {text: "Download Menu"}
+                    {text: "İndirilenler Menu"}
                 ],
                 [
-                    {text: 'Remove keyboard!!'}
+                    {text: 'Klavyeyi kaldır!!'}
                 ]
             ]
         }
@@ -88,59 +88,59 @@ bot.hears('Kembali Ke Menu Utama', (ctx) => {
 })
 
 bot.action('menu', ctx => {
-    let priceMessage = '┏━━❉ DARK BOT ❉━━━┓\n┣⊱ Creator : MrDevils\n┣⊱ Whatsapp : 85939888897\n┣⊱ Github : github.com/adimas999\n┣⊱ IG : adimas_sahadoet\n┣⊱ Owner : MrDevils\n┗━━━━━━━━━━━━━━━━\n┏━━❉ *INFO* ❉━━━┓\n┣⊱ *Dilarang spam bot*\n┗━━━━━━━━━━━━━━━━\n┏━━⊱ *BOT MENU* ⊰━━┓\n┣⊱ /othermenu\n┣⊱ /makermenu\n┣⊱ /praymenu\n┣⊱ /funmenu\n┣⊱ /kerangmenu\n┣⊱ /mediamenu\n┣⊱ /animemenu\n┣⊱ /nsfwmenu\n┣⊱ /downloadmenu(error)\n┗━━━━━━━━━━━━━━━━';
+    let priceMessage = '┏━━❉ DARK BOT ❉━━━┓\n┣⊱ Yaratıcı : Meyit47\n┣⊱ Tgram : @Meyit47\n┣⊱ chat : t.me/S1F1RB1RCHAT\n┣⊱ IG : adimas_sahadoet\n┣⊱ Owner : MEYİTZADE\n┗━━━━━━━━━━━━━━━━\n┏━━❉ *BİLGİ* ❉━━━┓\n┣⊱ *Yasaklı spam bot*\n┗━━━━━━━━━━━━━━━━\n┏━━⊱ *BOT MENU* ⊰━━┓\n┣⊱ /othermenu\n┣⊱ /makermenu\n┣⊱ /praymenu\n┣⊱ /funmenu\n┣⊱ /kerangmenu\n┣⊱ /mediamenu\n┣⊱ /animemenu\n┣⊱ /nsfwmenu\n┣⊱ /downloadmenu(error)\n┗━━━━━━━━━━━━━━━━';
     ctx.deleteMessage();
     bot.telegram.sendMessage(ctx.chat.id, priceMessage,
     {
         reply_markup: {
             keyboard: [
                 [
-                    {text: 'Other Menu'},
+                    {text: 'Diğer Menu'},
                     {text: "Maker Menu"},
-                    {text: "Pray Menu"}
+                    {text: "Dua Menu"}
                 ],
                 [
-                    {text: "Fun Menu"},
-                    {text: "Kerang Menu"},
+                    {text: "Eğlence Menu"},
+                    {text: "Kabuk Menu"},
                     {text: "Media Menu"}
                 ],
                 [
                     {text: "Anime Menu"},
                     {text: "Nsfw Menu"},
-                    {text: "Download Menu"}
+                    {text: "İndirilenler Menu"}
                 ],
                 [
-                    {text: 'Remove keyboard!!'}
+                    {text: 'Klavyeyi kaldır!!'}
                 ]
             ]
         }
     })
 })
 //silahkan di edit sesuka hati kalian
-bot.hears(['Hi','Hallo','Halo'], (ctx) => {
-    ctx.reply("Hallo "+ctx.from.username+" ada yang bisa saya bantu?");
+bot.hears(['MERHABA','Selam','nbr'], (ctx) => {
+    ctx.reply("Merhaba "+ctx.from.username+" Yardımcı olabilir miyim?");
 })
-bot.hears(['Assalamualaikum','Asalamualaikum','Assalamualaikum wr wb','Asalamualaikum wr wb'], (ctx) => {
-    ctx.reply("Waalaikumsalam Wr Wb");
+bot.hears(['selamun aleykum','Asalamualaikum','Assalamualaikum wr wb','Asalamualaikum wr wb'], (ctx) => {
+    ctx.reply("Vealeykumselam Wr Wb");
 })
 bot.hears('Bot', (ctx) => {
-    ctx.reply("Hallo "+ctx.from.username+"\n\nJika Kamu ingin menggunakan BOT silahkan ketikan command /menu atau /help");
+    ctx.reply("Merhaba "+ctx.from.username+"\n\nBOT kullanmak istiyorsanız lütfen /menu veya /help komutunu yazın.");
 })
-bot.hears('Apakabar', (ctx) => {
-    ctx.reply("Saya Baik baik saja bagaimana dengan mu?");
+bot.hears('Nasılsın', (ctx) => {
+    ctx.reply("İyiyim sen nasılsın?");
 })
-bot.hears(['Alhamdulilah baik','Baik','Saya baik baik saja'], (ctx) => {
-    ctx.reply("Alhamdulilah semoga sehat selalu");
+bot.hears(['Tanrıya şükür, iyi','İyi','Ben iyiyim'], (ctx) => {
+    ctx.reply("Allah'a şükürler olsun, umarım her zaman sağlıklı olursun");
 })
 //end message
 
 //Bot Settings
-const makerMessage = `┏━━⊱ *MAKER MENU* ⊰━━┓\n┣⊱ /nulis \n┣⊱ /crosslogo <text>\n┣⊱ /cat <text>\n┣⊱ /tahta <teks>\n┣⊱ /flowertext <text>\n┣⊱ /flametext <text>\n┣⊱ /woodentext <text>\n┣⊱ /silktext <text>\n┣⊱ /glowtext <text>\n┣⊱ /smoketext <text>\n┣⊱ /pubglogo |<text>|<text>\n┣⊱ /skytext <text>\n┣⊱ /cslogo <text>\n┣⊱ /emojiimage <emoji>\n┣⊱ /lightext <text>\n┣⊱ /retro <text>\n┣⊱ /text3dbox <text>\n┣⊱ /crismes <text>\n┣⊱ /thunder <text>\n┣⊱ /gpbutton <text>\n┣⊱ /spbutton <text>\n┣⊱ /snowwrite <text>\n┣⊱ /colortext <text>\n┣⊱ /grafiti <text>\n┣⊱ /pantai <text>\n┣⊱ /watercolor <text>\n┣⊱ /firetext <text>\n┣⊱ /metaltext <text>\n┣⊱ /baloontext <text>\n┣⊱ /padlocktext <text>\n┣⊱ /txtgif <text>\n┣⊱ /slidingtext <text>\n┣⊱ /bannerff <text>\n┣⊱ /logoff <text>\n┣⊱ /logoml <text>\n┣⊱ /blackpink <text>\n┣⊱ /textthunder <text>\n┣⊱ /silktext <text>\n┣⊱ /partytext <text>\n┣⊱ /romancetext <text>\n┣⊱ /googletxt |<text>|<text>|<text>\n┣⊱ /glowtext2 <text>\n┣⊱ /lovemessage <text>\n┣⊱ /glitchtxt |<text>|<text>\n┣⊱ /galaxytxt <text>\n┣⊱ /phlogo |<text>|<text>\n┣⊱ /wetglass <text>\n┣⊱ /stylelogo <text>\n┣⊱ /watercolor2 <text>\n┣⊱ /qrcode <text>\n┣⊱ /txtimg <text>\n┗━━━━━━━━━━━━━━━━`
-const otherMessage = `┏━━❉ *OTHER MENU* ❉━━━┓\n┣⊱ /reply <text>\n┣⊱ /RandomCat\n┣⊱ /RandomQuotes\n┣⊱ /QuotesNime\n┣⊱ /InfoGempa\n┣⊱ /FMyLive\n┣⊱ /MostViewFilm\n┣⊱ /RandomNama\n┣⊱ /RenunganHarian\n┣⊱ /FaktaUnik\n┣⊱ /MLHeroList\n┣⊱ /JadwalTVNow\n┣⊱ /KOIN\n┣⊱ /DADU\n┣⊱ /POKEMON\n┣⊱ /PuisiImage\n┣⊱ /RandomASU\n┣⊱ /RandomRubah\n┣⊱ /RandomKambing\n┣⊱ /RandomPanda\n┣⊱ /RandomBurung\n┣⊱ /RandomTupai\n┣⊱ /RandomKoala\n┣⊱ /bucin\n┣⊱ /coronaIndonesia\n┗━━━━━━━━━━━━━━━━`
-const tobatMessage = `┏━━❉ *PRAY MENU* ❉━━━┓\n┣⊱ /alkitab\n┣⊱ /quran <no surat>\n┣⊱ /quranlist\n┣⊱ /jadwalshalat <daerah>\n┗━━━━━━━━━━━━━━━━`
-const funMessage = `┏━━❉ *FUN MENU* ❉━━━┓\n┣⊱ /artinama <nama>\n┣⊱ /artimimpi <mimpi>\n┣⊱ /lirik <judul>\n┣⊱ /chord <judul>\n┣⊱ /zodiak <zodiak>\n┣⊱ /wikipaedi <text>\n┣⊱ /brainly <text>\n┣⊱ /kalkulator <angka>\n┣⊱ /weather <kota>\n┣⊱ /caklontong\n┣⊱ /family100\n┣⊱ /resep <masakan>\n┣⊱ /shopee <barang>\n┣⊱ /pinte <text>\n┣⊱ /gsmarena <nama>\n┣⊱ /cekjodoh |nama kamu|nama doi|\n┣⊱ /weton |tangal|bulan|tahun|\n┣⊱ /nomorhoki <no hp>\n┣⊱ /harijadian |tangal|bulan|tahun|\n┣⊱ /ipwhois <ip>\n┣⊱ /ascitxt <text>\n┣⊱ /distance |dari|ke|\n┣⊱ /infoalamat <alamat>\n┣⊱ /infomotor <merek>\n┣⊱ /infomobil <merek>\n┗━━━━━━━━━━━━━━━━`
+const makerMessage = `┏━━⊱ *YAPIMCI MENU* ⊰━━┓\n┣⊱ /nulis \n┣⊱ /crosslogo <text>\n┣⊱ /cat <text>\n┣⊱ /tahta <teks>\n┣⊱ /flowertext <text>\n┣⊱ /flametext <text>\n┣⊱ /woodentext <text>\n┣⊱ /silktext <text>\n┣⊱ /glowtext <text>\n┣⊱ /smoketext <text>\n┣⊱ /pubglogo |<text>|<text>\n┣⊱ /skytext <text>\n┣⊱ /cslogo <text>\n┣⊱ /emojiimage <emoji>\n┣⊱ /lightext <text>\n┣⊱ /retro <text>\n┣⊱ /text3dbox <text>\n┣⊱ /crismes <text>\n┣⊱ /thunder <text>\n┣⊱ /gpbutton <text>\n┣⊱ /spbutton <text>\n┣⊱ /snowwrite <text>\n┣⊱ /colortext <text>\n┣⊱ /grafiti <text>\n┣⊱ /pantai <text>\n┣⊱ /watercolor <text>\n┣⊱ /firetext <text>\n┣⊱ /metaltext <text>\n┣⊱ /baloontext <text>\n┣⊱ /padlocktext <text>\n┣⊱ /txtgif <text>\n┣⊱ /slidingtext <text>\n┣⊱ /bannerff <text>\n┣⊱ /logoff <text>\n┣⊱ /logoml <text>\n┣⊱ /blackpink <text>\n┣⊱ /textthunder <text>\n┣⊱ /silktext <text>\n┣⊱ /partytext <text>\n┣⊱ /romancetext <text>\n┣⊱ /googletxt |<text>|<text>|<text>\n┣⊱ /glowtext2 <text>\n┣⊱ /lovemessage <text>\n┣⊱ /glitchtxt |<text>|<text>\n┣⊱ /galaxytxt <text>\n┣⊱ /phlogo |<text>|<text>\n┣⊱ /wetglass <text>\n┣⊱ /stylelogo <text>\n┣⊱ /watercolor2 <text>\n┣⊱ /qrcode <text>\n┣⊱ /txtimg <text>\n┗━━━━━━━━━━━━━━━━`
+const otherMessage = `┏━━❉ *DİĞER MENU* ❉━━━┓\n┣⊱ /reply <text>\n┣⊱ /RandomCat\n┣⊱ /RandomQuotes\n┣⊱ /QuotesNime\n┣⊱ /InfoGempa\n┣⊱ /FMyLive\n┣⊱ /MostViewFilm\n┣⊱ /RandomNama\n┣⊱ /RenunganHarian\n┣⊱ /FaktaUnik\n┣⊱ /MLHeroList\n┣⊱ /JadwalTVNow\n┣⊱ /KOIN\n┣⊱ /DADU\n┣⊱ /POKEMON\n┣⊱ /PuisiImage\n┣⊱ /RandomASU\n┣⊱ /RandomRubah\n┣⊱ /RandomKambing\n┣⊱ /RandomPanda\n┣⊱ /RandomBurung\n┣⊱ /RandomTupai\n┣⊱ /RandomKoala\n┣⊱ /bucin\n┣⊱ /coronaIndonesia\n┗━━━━━━━━━━━━━━━━`
+const tobatMessage = `┏━━❉ *DUA MENU* ❉━━━┓\n┣⊱ /alkitab\n┣⊱ /quran <no surat>\n┣⊱ /quranlist\n┣⊱ /jadwalshalat <daerah>\n┗━━━━━━━━━━━━━━━━`
+const funMessage = `┏━━❉ *EĞLENCE MENU* ❉━━━┓\n┣⊱ /artinama <nama>\n┣⊱ /artimimpi <mimpi>\n┣⊱ /lirik <judul>\n┣⊱ /chord <judul>\n┣⊱ /zodiak <zodiak>\n┣⊱ /wikipaedi <text>\n┣⊱ /brainly <text>\n┣⊱ /kalkulator <angka>\n┣⊱ /weather <kota>\n┣⊱ /caklontong\n┣⊱ /family100\n┣⊱ /resep <masakan>\n┣⊱ /shopee <barang>\n┣⊱ /pinte <text>\n┣⊱ /gsmarena <nama>\n┣⊱ /cekjodoh |nama kamu|nama doi|\n┣⊱ /weton |tangal|bulan|tahun|\n┣⊱ /nomorhoki <no hp>\n┣⊱ /harijadian |tangal|bulan|tahun|\n┣⊱ /ipwhois <ip>\n┣⊱ /ascitxt <text>\n┣⊱ /distance |dari|ke|\n┣⊱ /infoalamat <alamat>\n┣⊱ /infomotor <merek>\n┣⊱ /infomobil <merek>\n┗━━━━━━━━━━━━━━━━`
 const kerangMessage = `
-┏━━❉ *KERANG MENU* ❉━━━┓
+┏━━❉ *KABUK MENU* ❉━━━┓
 ┣⊱ /apakah <text>
 ┣⊱ /bisakah <text>
 ┣⊱ /kapankah <text>
@@ -195,15 +195,15 @@ const nsfwMessage = `
 ┣⊱ /nhentaipdf <id>
 ┣⊱ /nhentai <query>
 ┗━━━━━━━━━━━━━━━━`
-const bisakah = ['bisa','tidak bisa','mungkin bisa','mungkin tidak','coba ulangi']
-const apakah = ['Ya','Tidak','Coba ulangi']
+const bisakah = ['Olabilmek','Yapamamak','Belki','muhtemelen değil','tekrarlamayı dene']
+const apakah = ['Evet','HAYIR','Tekrarlamayı deneyin']
 const persen = ['1','2','3','4','5','6','7','8','9','10','15','20','25','30','35','40','45','50','55','60','65','70','75','80','85','90','95','96','97','98','99','100']
 const angka = ['0','1','2','3','4','5','6','7','8','9','10','11','12']
 const kapankah = ['1','2','3','4','5','6','7','8','9','10',,'11','12','13','14','15','16','17','18','19','20']
-const hari = ['Tahun','Bulan','Hari','Minggu','Jam']
-const apa = ['Lagi','Yang lalu']
+const hari = ['Yıl','Ay','Gün','Pazar','saat']
+const apa = ['Tekrar','Evvel']
 const hero = `
-Hero Tank :
+Kahraman Tankları :
 1.	Ruby
 2.	Atlas
 3.	Barats
@@ -224,7 +224,7 @@ Hero Tank :
 18.	Akai
 19.	Franco
 
-Hero Fighter :
+Kahraman Savaşçı :
 1.	Ruby
 2.	Minsitthar
 3.	Argus
@@ -257,7 +257,7 @@ Hero Fighter :
 30.	Zilong
 31.	Alucard
 
-Hero Assasin :
+Kahraman Suikastçı :
 1.	Harley
 2.	Kadita
 3.	Ling
@@ -277,7 +277,7 @@ Hero Assasin :
 17.	Zilong
 18.	Alucard
 
-Hero Marksman :
+Kahraman Nişancı :
 1.	Claude
 2.	Kimmy
 3.	Popol & Kupa
@@ -295,7 +295,7 @@ Hero Marksman :
 15.	Clint
 16.	Miya
 
-Hero Mage :
+Kahraman Büyücü :
 1.	Harley
 2.	Chang’e
 3.	Vale
@@ -322,7 +322,7 @@ Hero Mage :
 24.	Nana
 25.	Gord
 
-Hero Support :
+Kahraman Desteği :
 1.	Estes
 2.	Faramis
 3.	Carmilla
@@ -336,9 +336,9 @@ Hero Support :
 //end settings
 
 //list menu
-bot.hears('Remove keyboard!!', ctx => {
+bot.hears('Klavyeyi kaldır!!', ctx => {
     ctx.deleteMessage()
-    bot.telegram.sendMessage(ctx.chat.id,'Keyboard Berhasil Dihilangkan!!',
+    bot.telegram.sendMessage(ctx.chat.id,'Klavye Başarıyla Kaldırıldı!!',
     {
         reply_markup: {
             remove_keyboard: true //kalau ngak ngerti jngan di utak atik
